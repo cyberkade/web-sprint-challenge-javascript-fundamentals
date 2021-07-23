@@ -24,15 +24,31 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
-1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each.
+
+    -map reduce and filter will all loop over each item in an array
+    -map requires one parameter and a return. It will return an array full of new items you specify. You can use map to extract values from an array, or even to just call a function on every item in an array.
+    -reduce requires two parameters. It will return one specific item/value, specified by you. I look at it as a science expiriment, adding a bunch of ingredients just for one little drop at the end. You can use reduce for countless tasks, but a few good use cases for reduce is getting the maximum value, sum, or average from a group of numbers inside your data.
+    -filter requires one parameter and doesn't require a return. With filter, you're essentialy writing a conditional statement, where everything that is true (or false, depending on your conditional) will be passed into a new array. Filter is great for when you want to extract a certain type of data from an existing data set. For example: If you wanted to filter out all the users above the age of 21. Filter is also great for filtering repeated out of an array.
 
 2. Explain the difference between a callback and a higher order function.
+    
+    -a callback function is a function that you pass into other functions as an argument. A higher order function is a function that accepts functions as an argument, or returns a function.
 
 3. Explain what a closure is.
 
+    -closure is when an inner function reaches out of its scope, to an outer function's scope, to grab a value that isn't inside the function itself. A function inside of a function represents closure.
+
 4. Describe the four principles of the 'this' keyword.
 
+    -Window: 'this' is binded to window by default, global object in node, or returns undefined in strict mode. 
+    -Implicit: 'this' is binded to whatever is left of the dot
+    -Explicit: 'this' is binded to what you specify after .call .bind or .apply
+    -New: 'this' is binded to the object you will be creating when you call the constructor function.
+
 5. Why do we need super() in an extended class?
+
+    -We use super() in a child class to allow that child access to the properties and methods from a parent class.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
