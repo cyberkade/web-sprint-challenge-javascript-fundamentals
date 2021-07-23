@@ -70,6 +70,15 @@ const zooAnimals = [
     });
     return displayNames;
   }
+
+  // This is the same task done with forEach. I personally prefer map in this case, but forEach works here too. //
+  // function animalNames(data){
+  //   let displayNames = [];
+  //   data.forEach((item)=>{
+  //     displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
+  //   });
+  //   return displayNames;
+  // }
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -207,12 +216,10 @@ class CuboidMakerTwo{
     this.height = attr.height;
   };
   volume(){
-    let volume = this.length*this.width*this.height;
-    return volume;
+    return this.length*this.width*this.height;
   };
   surfaceArea(){
-    let surface = 2*(this.length * this.width + this.length * this.height + this.width * this.height);
-    return surface;
+    return 2*(this.length * this.width + this.length * this.height + this.width * this.height);
   };
 }
 const cuboidTwo = new CuboidMakerTwo({length:4, width:5, height:5})
@@ -227,10 +234,20 @@ console.log(cuboidTwo.surfaceArea()); // 130
 
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
-  
-
-
-
+  class CubeMaker extends CuboidMaker{
+    constructor(attr){
+      super(attr)
+    }
+    volume(){
+      return `The volume of your cube is ${this.length*this.width*this.height} cubic meters.`
+    }
+    surfaceArea(){
+      return `The surface are of your cube is ${6*(this.length*this.height)} square units.`
+    }
+  }
+const cube = new CubeMaker({length:6, width:6, height:6})
+  console.log(cube.volume()); // 216
+  console.log(cube.surfaceArea()); // 216
 
 
   /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
