@@ -206,11 +206,11 @@ class CuboidMakerTwo{
     this.width = attr.width;
     this.height = attr.height;
   };
-  volume = function(){
+  volume(){
     let volume = this.length*this.width*this.height;
     return volume;
   };
-  surfaceArea = function(){
+  surfaceArea(){
     let surface = 2*(this.length * this.width + this.length * this.height + this.width * this.height);
     return surface;
   };
